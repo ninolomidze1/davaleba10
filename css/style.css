@@ -1,0 +1,75 @@
+.grid_container {
+  display: grid;
+  
+
+  grid-template-areas:
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main blank image"
+    "main main blank extra"
+    "banner banner banner banner";
+}
+.grid_container > div {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.header {
+  background-color: rgb(28, 28, 109);
+  grid-area: header;
+}
+.menu {
+  background-color: rgb(209, 110, 110);
+  grid-area: menu;
+}
+
+.hero {
+  background-color: lightskyblue;
+  grid-area: hero;
+  height: 300px;
+}
+
+.main {
+  background-color: rgb(31, 31, 68);
+  grid-area: main;
+  height: 200px;
+}
+
+/*.blank{
+  background-color: white;
+  grid-area: blank;
+}*/
+.image {
+  background-color: lightgreen;
+  grid-area: image;
+ 
+}
+
+.extra {
+  background-color: aquamarine;
+  grid-area: extra;
+  
+}
+
+.banner {
+  background-color: burlywood;
+  grid-area: banner;
+  height: 97px;
+}
+
+@media screen and (max-width: 480px){
+  .grid_container {
+    grid-template-areas:
+      "header header header header"
+      "hero hero hero hero"
+      "menu main main main"
+      "menu banner banner banner"
+      "menu extra extra image";
+  }
+  .blank{
+    display: none;
+  }
+}
